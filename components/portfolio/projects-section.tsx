@@ -2,7 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { ExternalLink, Github, Brain, Radio, Cloud, Sparkles } from "lucide-react"
+import { ExternalLink, Github, Brain, Radio, Cloud, Sparkles, Server, Activity } from "lucide-react"
 import { useRef } from "react"
 
 const projects = [
@@ -28,26 +28,37 @@ const projects = [
     metric: "GDPR-Ready",
   },
   {
+    title: "Cloud-Native Microservices Platform",
+    subtitle: "Enterprise Architecture",
+    description:
+      "Production-grade microservices architecture with API Gateway, Auth Service (Go/Gin), and Data Service. Features Terraform IaC, Kubernetes HPA, and GitHub Actions CI/CD.",
+    tech: ["Node.js", "Go", "Python", "AWS EKS", "Terraform", "Kubernetes"],
+    icon: Server,
+    github: "https://github.com/prajwal2308/cloud-microservices-platform",
+    featured: true,
+    metric: "99.9% Uptime",
+  },
+  {
+    title: "Real-time AI Analytics Pipeline",
+    subtitle: "Streaming Data Platform",
+    description:
+      "High-throughput streaming pipeline processing 10,000+ events/sec with AI anomaly detection, WebSocket real-time dashboards, and Prometheus/Grafana monitoring.",
+    tech: ["Python", "FastAPI", "Redis", "PyTorch", "TimescaleDB", "WebSockets"],
+    icon: Activity,
+    github: "https://github.com/prajwal2308/realtime-ai-analytics",
+    featured: true,
+    metric: "10K+ Events/sec",
+  },
+  {
     title: "Proactive Retrieval Thinker-Curator",
     subtitle: "Multi-Agent AI System",
     description:
       "Multi-agent AI system enhancing LLM long-term memory using proactive retrieval, reducing hallucination rates by 15% across large-scale datasets.",
     tech: ["Python", "LangChain", "LLM", "Vector Embeddings", "RAG"],
     icon: Brain,
-    github: "https://github.com/prajwalsrinivas238",
+    github: "https://github.com/prajwal2308/Proactive_Retrieval_Thinker_Curator_Model_for_AI_Memory",
     featured: false,
     metric: "-15% Hallucination",
-  },
-  {
-    title: "LoRaWAN Mesh IoT Simulator",
-    subtitle: "Containerized Network Simulator",
-    description:
-      "Lightweight IoT mesh network simulator using containerized UDP nodes with multi-hop routing and failure injection to mimic real-world LoRaWAN behavior.",
-    tech: ["Docker", "Kubernetes", "UDP", "IoT", "Mesh"],
-    icon: Radio,
-    github: "https://github.com/prajwalsrinivas238",
-    featured: false,
-    metric: "Multi-hop Routing",
   },
 ]
 
