@@ -6,6 +6,7 @@ import { AboutSection } from "./about-section"
 import { ExperienceSection } from "./experience-section"
 import { SkillsSection } from "./skills-section"
 import { ProjectsSection } from "./projects-section"
+import { GitHubSection } from "./github-section"
 import { ContactSection } from "./contact-section"
 import { Footer } from "./footer"
 import { ScrollProgress, FloatingDock } from "./scroll-progress"
@@ -45,6 +46,8 @@ export function PortfolioClient() {
         <SkillsSection />
         <SectionDivider />
         <ProjectsSection />
+        <SectionDivider />
+        <GitHubSection />
         <SectionDivider />
         <ContactSection />
       </main>
