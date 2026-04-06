@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --background: 10 10 15;
+  --foreground: 255 255 255;
+  --card: 20 20 30;
+  --card-foreground: 255 255 255;
+  --primary: 77 217 217;
+  --primary-foreground: 10 10 15;
+  --secondary: 30 30 50;
+  --secondary-foreground: 255 255 255;
+  --muted: 100 100 130;
+  --muted-foreground: 160 160 190;
+  --accent: 77 217 217;
+  --accent-foreground: 10 10 15;
+  --border: 50 50 80;
+  --radius: 0.75rem;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: #0a0a0f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a3a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a6a;
+}
+
+/* Glow text effect */
+.glow-text {
+  text-shadow: 0 0 40px rgba(77, 217, 217, 0.4), 0 0 80px rgba(77, 217, 217, 0.2);
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(77, 217, 217, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 217, 217, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Marquee animation */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: scroll 25s linear infinite;
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glow border */
+.glow-border {
+  box-shadow: 0 0 20px rgba(77, 217, 217, 0.15), inset 0 0 20px rgba(77, 217, 217, 0.05);
+}
+
+/* Text balance */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
